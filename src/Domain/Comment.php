@@ -14,7 +14,7 @@ class Comment
     /**
      * Comment author.
      *
-     * @var string
+     * @var \Alaska\Domain\User
      */
     private $author;
 
@@ -32,6 +32,7 @@ class Comment
      */
     private $article;
 
+
     public function getId() {
         return $this->id;
     }
@@ -45,7 +46,7 @@ class Comment
         return $this->author;
     }
 
-    public function setAuthor($author) {
+    public function setAuthor(User $author) {
         $this->author = $author;
         return $this;
     }
@@ -67,4 +68,5 @@ class Comment
         $this->article = $article;
         return $this;
     }
+
 }
