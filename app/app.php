@@ -43,3 +43,6 @@ $app['dao.comment'] = function ($app) {
     $commentDAO->setUserDAO($app['dao.user']);
     return $commentDAO;
 };
+$app->register(new Silex\Provider\FormServiceProvider());
+$app->register(new Silex\Provider\LocaleServiceProvider());
+$app->register(new Silex\Provider\TranslationServiceProvider());
