@@ -44,6 +44,7 @@ class Comment
 
     function __construct()
     {
+        $this->parentId = 0;
         $this->children = [];
     }
 
