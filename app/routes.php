@@ -32,7 +32,7 @@ $app->match('/article/{id}', function ($id, Request $request) use ($app) {
         }
         $commentFormView = $commentForm->createView();
     }
-    $comments = $app['dao.comment']->findAllByArticle($id);
+    $comments = $app['dao.comment']->findAllWithChildren($id);
 
     return $app['twig']->render('article.html.twig', array(
         'article' => $article,

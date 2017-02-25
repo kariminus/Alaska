@@ -33,6 +33,20 @@ class Comment
     private $article;
 
 
+    /**
+     * Associated comment id.
+     *
+     * @var integer
+     */
+    private $parentId;
+
+    private $children;
+
+    function __construct()
+    {
+        $this->children = [];
+    }
+
     public function getId() {
         return $this->id;
     }
@@ -67,6 +81,23 @@ class Comment
     public function setArticle(Article $article) {
         $this->article = $article;
         return $this;
+    }
+
+    public function getParentId() {
+        return $this->parentId;
+    }
+
+    public function setParentId($parentId) {
+        $this->parentId = $parentId;
+        return $this;
+    }
+
+    public function addChild(Comment $child) {
+        $this->children[] = $child;
+    }
+
+    public function getChildren() {
+        return $this->children;
     }
 
 }

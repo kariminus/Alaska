@@ -9,14 +9,16 @@
 
     <h3>Comments</h3>
     {% for comment in comments %}
-        <strong>{{ comment.author.username }}</strong> said : {{ comment.content }}<br>
+        {% include 'comment.html.twig' %}
     {% else %}
         No comments yet.
     {% endfor %}
 
     <h3>Add a comment</h3>
     {% if commentForm %}
-        {{ form_start(commentForm) }}
+        {{ form_start(commentForm, { 'attr':  {
+            'class': 'form',
+        }}) }}
         <div class="form-group">
             {{ form_errors(commentForm.content) }}
             {{ form_widget(commentForm.content, { 'attr':  {

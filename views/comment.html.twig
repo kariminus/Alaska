@@ -1,0 +1,12 @@
+<div id="comment-{{ comment.id }}">
+    <strong>{{ comment.author.username }}</strong> said : {{ comment.content }}<br>
+    <button class="btn btn-default reply" data-id="{{ comment.id }}">Répondre</button>
+</div>
+
+<div style="margin-left: 50px;">
+    {% if comment.children is defined %}
+        {% for comment in comment.children %}
+            {% include 'comment.html.twig' %}
+        {% endfor %}
+    {% endif %}
+</div>

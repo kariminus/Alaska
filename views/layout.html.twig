@@ -51,10 +51,12 @@
 
     </footer>
 </div>
-
-<!-- jQuery -->
-<script src="{{ asset('/lib/jquery/jquery.min.js') }}"></script>
-<!-- JavaScript Boostrap plugin -->
-<script src="{{ asset('/lib/bootstrap/js/bootstrap.min.js') }}"></script>
+{% block javascript %}
+    <!-- jQuery -->
+    <script src="{{ asset('/lib/jquery/jquery.min.js') }}"></script>
+    <!-- JavaScript Boostrap plugin -->
+    <script src="{{ asset('/lib/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/lib/jquery/reply.js') }}"></script>
+{% endblock %}
 </body>
 </html>

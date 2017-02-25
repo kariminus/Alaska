@@ -16,6 +16,16 @@ insert into t_user values
 (3, 'admin', '$2y$13$A8MQM2ZNOi99EW.ML7srhOJsCaybSbexAj/0yXrJs4gQ/2BqMMW2K', 'EDDsl&fBCJB|a5XUtAlnQN8', 'ROLE_ADMIN');
 
 insert into t_comment values
-(1, 'Great! Keep up the good work.', 1, 1);
+(1, 'Great! Keep up the good work.', 1, 1, 0);
 insert into t_comment values
-(2, "Thank you, I'll try my best.", 1, 2);
+(2, "Thank you, I'll try my best.", 1, 2, 1);
+insert into t_comment values
+(3, "Ok nice", 1, 1, 2);
+insert into t_comment values
+(4, "enfant", 1, 1, 1);
+insert into t_comment values
+(5, "autre enfant", 1, 1, 1);
+insert into t_comment values
+(6, "enfant2", 1, 1, 4);
+insert into t_comment values
+(7, 'Parent', 1, 2, 0);
