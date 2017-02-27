@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43d2fad9-867b-4da2-98db-acab353dd8ed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="43d2fad9-867b-4da2-98db-acab353dd8ed" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +21,8 @@
       <file leaf-file-name="CommentDAO.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DAO/CommentDAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="848">
-              <caret line="172" column="31" lean-forward="true" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
+            <state relative-caret-position="518">
+              <caret line="162" column="55" lean-forward="true" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
               <folding>
                 <marker date="1488192562402" expanded="true" signature="698:736" ph="select * fro... t_comment" />
                 <marker date="1488192562402" expanded="true" signature="1492:1574" ph="select com_i... t_comment" />
@@ -501,15 +499,15 @@
       <workItem from="1488014926803" duration="5338000" />
       <workItem from="1488028958842" duration="15401000" />
       <workItem from="1488116556264" duration="2754000" />
-      <workItem from="1488187440597" duration="5277000" />
+      <workItem from="1488187440597" duration="5389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79663000" />
+    <option name="totallyTimeSpent" value="79775000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
+    <frame x="-13" y="-13" width="3866" height="2106" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -897,8 +895,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/CommentDAO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="172" column="31" lean-forward="true" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
+        <state relative-caret-position="518">
+          <caret line="162" column="55" lean-forward="true" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
           <folding>
             <marker date="1488192562402" expanded="true" signature="698:736" ph="select * fro... t_comment" />
             <marker date="1488192562402" expanded="true" signature="1492:1574" ph="select com_i... t_comment" />
