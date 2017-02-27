@@ -27,6 +27,10 @@ $app->match('/article/{id}', function ($id, Request $request) use ($app) {
         $commentForm = $app['form.factory']->create(CommentType::class, $comment);
         $commentForm->handleRequest($request);
         if ($commentForm->isSubmitted() && $commentForm->isValid()) {
+            if ($comment->getParentId() != 0) {
+                $parent = $app['dao.comment']->find($comment->getParentId());
+                $comment->setDepth($parent->getDepth()+1);
+            }
             $app['dao.comment']->save($comment);
             $app['session']->getFlashBag()->add('success', 'Your comment was successfully added.');
         }

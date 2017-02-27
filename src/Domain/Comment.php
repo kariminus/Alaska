@@ -40,12 +40,23 @@ class Comment
      */
     private $parentId;
 
+    /**
+     * @var array
+     */
     private $children;
+
+    /**
+     * @var int
+     */
+    private $depth;
+
+
 
     function __construct()
     {
         $this->parentId = 0;
         $this->children = [];
+        $this->depth = 0;
     }
 
     public function getId() {
@@ -100,5 +111,23 @@ class Comment
     public function getChildren() {
         return $this->children;
     }
+
+    /**
+     * @return int
+     */
+    public function getDepth()
+    {
+        return $this->depth;
+    }
+
+    /**
+     * @param int $depth
+     */
+    public function setDepth($depth)
+    {
+        $this->depth = $depth;
+    }
+
+
 
 }
