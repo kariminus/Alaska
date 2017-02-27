@@ -51,7 +51,6 @@ $app['dao.user'] = function ($app) {
 $app['dao.comment'] = function ($app) {
     $commentDAO = new Alaska\DAO\CommentDAO($app['db']);
     $commentDAO->setArticleDAO($app['dao.article']);
-    $commentDAO->setUserDAO($app['dao.user']);
     return $commentDAO;
 };
 $app->register(new Silex\Provider\FormServiceProvider());

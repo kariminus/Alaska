@@ -11,17 +11,9 @@ class CommentDAO extends DAO
      */
     private $articleDAO;
 
-    /**
-     * @var \Alaska\DAO\UserDAO
-     */
-    private $userDAO;
 
     public function setArticleDAO(ArticleDAO $articleDAO) {
         $this->articleDAO = $articleDAO;
-    }
-
-    public function setUserDAO(UserDAO $userDAO) {
-        $this->userDAO = $userDAO;
     }
 
     /**
@@ -54,7 +46,7 @@ class CommentDAO extends DAO
 
         // art_id is not selected by the SQL query
         // The article won't be retrieved during domain objet construction
-        $sql = "select com_id, com_content, usr_id, parent_id, depth from t_comment where art_id=? order by com_id";
+        $sql = "select com_id, com_content, author, parent_id, depth from t_comment where art_id=? order by com_id";
         $result = $this->getDb()->fetchAll($sql, array($articleId));
 
         // Convert query result to an array of domain objects
@@ -114,14 +106,6 @@ class CommentDAO extends DAO
         $this->getDb()->delete('t_comment', array('art_id' => $articleId));
     }
 
-    /**
-     * Removes all comments for a user
-     *
-     * @param integer $userId The id of the user
-     */
-    public function deleteAllByUser($userId) {
-        $this->getDb()->delete('t_comment', array('usr_id' => $userId));
-    }
 
     /**
      * Saves a comment into the database.
@@ -131,7 +115,7 @@ class CommentDAO extends DAO
     public function save(Comment $comment) {
         $commentData = array(
             'art_id' => $comment->getArticle()->getId(),
-            'usr_id' => $comment->getAuthor()->getId(),
+            'author' => $comment->getAuthor(),
             'com_content' => $comment->getContent(),
             'parent_id' => $comment->getParentId(),
             'depth' => $comment->getDepth()
@@ -204,6 +188,7 @@ class CommentDAO extends DAO
         $comment = new Comment();
         $comment->setId($row['com_id']);
         $comment->setContent($row['com_content']);
+        $comment->setAuthor($row['author']);
         $comment->setParentId($row['parent_id']);
         $comment->setDepth($row['depth']);
 
@@ -212,12 +197,6 @@ class CommentDAO extends DAO
             $articleId = $row['art_id'];
             $article = $this->articleDAO->find($articleId);
             $comment->setArticle($article);
-        }
-        if (array_key_exists('usr_id', $row)) {
-            // Find and set the associated author
-            $userId = $row['usr_id'];
-            $user = $this->userDAO->find($userId);
-            $comment->setAuthor($user);
         }
 
         return $comment;

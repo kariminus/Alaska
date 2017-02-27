@@ -20,9 +20,8 @@ create table t_comment (
     com_id integer not null primary key auto_increment,
     com_content varchar(500) not null,
     art_id integer not null,
-    usr_id integer not null,
+    author varchar(50) not null,
     parent_id integer,
     depth integer,
-    constraint fk_com_art foreign key(art_id) references t_article(art_id),
-    constraint fk_com_usr foreign key(usr_id) references t_user(usr_id)
+    constraint fk_com_art foreign key(art_id) references t_article(art_id)
 ) engine=innodb character set utf8 collate utf8_unicode_ci;

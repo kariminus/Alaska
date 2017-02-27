@@ -20,6 +20,14 @@
             'class': 'form',
         }}) }}
         <div class="form-group">
+            {{ form_errors(commentForm.author) }}
+            {{ form_widget(commentForm.author, { 'attr':  {
+                'rows': '1',
+                'class': 'form-control',
+                'placeholder': 'Enter your name'
+            }}) }}
+        </div>
+        <div class="form-group">
             {{ form_errors(commentForm.content) }}
             {{ form_widget(commentForm.content, { 'attr':  {
                 'rows': '4',

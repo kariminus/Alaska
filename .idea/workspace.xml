@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43d2fad9-867b-4da2-98db-acab353dd8ed" name="Default" comment="" />
+    <list default="true" id="43d2fad9-867b-4da2-98db-acab353dd8ed" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.php" afterPath="$PROJECT_DIR$/app/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/content.sql" afterPath="$PROJECT_DIR$/db/content.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/structure.sql" afterPath="$PROJECT_DIR$/db/structure.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/CommentDAO.php" afterPath="$PROJECT_DIR$/src/DAO/CommentDAO.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Domain/Comment.php" afterPath="$PROJECT_DIR$/src/Domain/Comment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/Type/CommentType.php" afterPath="$PROJECT_DIR$/src/Form/Type/CommentType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/article.html.twig" afterPath="$PROJECT_DIR$/views/article.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/comment.html.twig" afterPath="$PROJECT_DIR$/views/comment.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/comment_form.html.twig" afterPath="$PROJECT_DIR$/views/comment_form.html.twig" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,26 +30,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="CommentDAO.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommentDAO.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/CommentDAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="162" column="55" lean-forward="true" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
+            <state relative-caret-position="1475">
+              <caret line="199" column="9" lean-forward="false" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
               <folding>
-                <marker date="1488192562402" expanded="true" signature="698:736" ph="select * fro... t_comment" />
-                <marker date="1488192562402" expanded="true" signature="1492:1574" ph="select com_i... t_comment" />
-                <marker date="1488192562402" expanded="true" signature="1492:1590" ph="select com_i... t_comment" />
-                <marker date="1488192562402" expanded="true" signature="2792:2836" ph="select * fro... t_comment" />
+                <marker date="1488193297790" expanded="true" signature="535:573" ph="select * fro... t_comment" />
+                <marker date="1488193297790" expanded="true" signature="1329:1411" ph="select com_i... t_comment" />
+                <marker date="1488193297790" expanded="true" signature="1329:1427" ph="select com_i... t_comment" />
+                <marker date="1488193297790" expanded="true" signature="2629:2673" ph="select * fro... t_comment" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/content.sql">
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state relative-caret-position="1422">
+              <caret line="52" column="52" lean-forward="false" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -46,8 +58,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1046">
-              <caret line="108" column="70" lean-forward="true" selection-start-line="108" selection-start-column="70" selection-end-line="108" selection-end-column="70" />
+            <state relative-caret-position="1155">
+              <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
               <folding>
                 <element signature="e#7#52#0#PHP" expanded="true" />
               </folding>
@@ -55,34 +67,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/article.html.twig">
+      <file leaf-file-name="CommentType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/Type/CommentType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="957">
-              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticleDAO.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/ArticleDAO.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2145">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="759">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
-                <marker date="1487523176009" expanded="true" signature="279:323" ph="select * fro... t_article" />
-                <marker date="1487523176009" expanded="true" signature="902:940" ph="select * fro... t_article" />
+                <element signature="e#36#76#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reply.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/lib/jquery/reply.js">
+      <file leaf-file-name="article.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/article.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="1254">
+              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -98,11 +99,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="comment_form.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/comment_form.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Comment.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Domain/Comment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1244">
-              <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state relative-caret-position="759">
+              <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -135,12 +146,10 @@
         <option value="$PROJECT_DIR$/views/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Domain/User.php" />
         <option value="$PROJECT_DIR$/views/login.html.twig" />
-        <option value="$PROJECT_DIR$/app/app.php" />
         <option value="$PROJECT_DIR$/web/css/main.css" />
         <option value="$PROJECT_DIR$/src/Form/Type/ArticleType.php" />
         <option value="$PROJECT_DIR$/views/article_form.html.twig" />
         <option value="$PROJECT_DIR$/src/DAO/ArticleDAO.php" />
-        <option value="$PROJECT_DIR$/views/comment_form.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/Type/UserType.php" />
         <option value="$PROJECT_DIR$/views/user_form.html.twig" />
         <option value="$PROJECT_DIR$/views/admin.html.twig" />
@@ -149,15 +158,17 @@
         <option value="$PROJECT_DIR$/views/reply.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/Type/CommentType.php" />
         <option value="$PROJECT_DIR$/web/lib/jquery/reply.js" />
-        <option value="$PROJECT_DIR$/views/article.html.twig" />
-        <option value="$PROJECT_DIR$/db/structure.sql" />
-        <option value="$PROJECT_DIR$/db/content.sql" />
-        <option value="$PROJECT_DIR$/views/comment.html.twig" />
         <option value="$PROJECT_DIR$/src/Domain/Comment.php" />
+        <option value="$PROJECT_DIR$/db/content.sql" />
         <option value="$PROJECT_DIR$/src/DAO/CommentDAO.php" />
+        <option value="$PROJECT_DIR$/src/Form/Type/CommentType.php" />
+        <option value="$PROJECT_DIR$/db/structure.sql" />
+        <option value="$PROJECT_DIR$/app/app.php" />
+        <option value="$PROJECT_DIR$/views/comment.html.twig" />
+        <option value="$PROJECT_DIR$/views/comment_form.html.twig" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/views/article.html.twig" />
       </list>
     </option>
   </component>
@@ -499,15 +510,15 @@
       <workItem from="1488014926803" duration="5338000" />
       <workItem from="1488028958842" duration="15401000" />
       <workItem from="1488116556264" duration="2754000" />
-      <workItem from="1488187440597" duration="5389000" />
+      <workItem from="1488187440597" duration="6470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79775000" />
+    <option name="totallyTimeSpent" value="80856000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3866" height="2106" extended-state="7" />
+    <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -552,10 +563,10 @@
         <state relative-caret-position="3465">
           <caret line="105" column="5" lean-forward="false" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
           <folding>
-            <marker date="1488192562402" expanded="true" signature="698:736" ph="select * fro... t_comment" />
-            <marker date="1488192562402" expanded="true" signature="1492:1574" ph="select com_i... t_comment" />
-            <marker date="1488192562402" expanded="true" signature="1492:1590" ph="select com_i... t_comment" />
-            <marker date="1488192562402" expanded="true" signature="2792:2836" ph="select * fro... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="535:573" ph="select * fro... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="1329:1411" ph="select com_i... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="1329:1427" ph="select com_i... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="2629:2673" ph="select * fro... t_comment" />
           </folding>
         </state>
       </provider>
@@ -611,10 +622,10 @@
         <state relative-caret-position="3465">
           <caret line="105" column="5" lean-forward="false" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
           <folding>
-            <marker date="1488192562402" expanded="true" signature="698:736" ph="select * fro... t_comment" />
-            <marker date="1488192562402" expanded="true" signature="1492:1574" ph="select com_i... t_comment" />
-            <marker date="1488192562402" expanded="true" signature="1492:1590" ph="select com_i... t_comment" />
-            <marker date="1488192562402" expanded="true" signature="2792:2836" ph="select * fro... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="535:573" ph="select * fro... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="1329:1411" ph="select com_i... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="1329:1427" ph="select com_i... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="2629:2673" ph="select * fro... t_comment" />
           </folding>
         </state>
       </provider>
@@ -759,13 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/comment_form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../blog/config/settings.yml" />
     <entry file="file://$PROJECT_DIR$/views/reply.html.twig" />
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -779,16 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1554">
           <caret line="58" column="63" lean-forward="false" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/Type/CommentType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#36#76#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/ArticleDAO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2145">
@@ -835,10 +821,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/structure.sql">
+    <entry file="file://$PROJECT_DIR$/src/Domain/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="759">
+          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/CommentDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1475">
+          <caret line="199" column="9" lean-forward="false" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
+          <folding>
+            <marker date="1488193297790" expanded="true" signature="535:573" ph="select * fro... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="1329:1411" ph="select com_i... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="1329:1427" ph="select com_i... t_comment" />
+            <marker date="1488193297790" expanded="true" signature="2629:2673" ph="select * fro... t_comment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/Type/CommentType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#36#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/content.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -851,11 +868,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/article.html.twig">
+    <entry file="file://$PROJECT_DIR$/db/structure.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="957">
-          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="858">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1422">
+          <caret line="52" column="52" lean-forward="false" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/comment_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+          <folding>
+            <element signature="e#7#52#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -867,42 +910,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Comment.php">
+    <entry file="file://$PROJECT_DIR$/views/article.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1244">
-          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state relative-caret-position="1254">
+          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/content.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1046">
-          <caret line="108" column="70" lean-forward="true" selection-start-line="108" selection-start-column="70" selection-end-line="108" selection-end-column="70" />
-          <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/CommentDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="162" column="55" lean-forward="true" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
-          <folding>
-            <marker date="1488192562402" expanded="true" signature="698:736" ph="select * fro... t_comment" />
-            <marker date="1488192562402" expanded="true" signature="1492:1574" ph="select com_i... t_comment" />
-            <marker date="1488192562402" expanded="true" signature="1492:1590" ph="select com_i... t_comment" />
-            <marker date="1488192562402" expanded="true" signature="2792:2836" ph="select * fro... t_comment" />
-          </folding>
         </state>
       </provider>
     </entry>

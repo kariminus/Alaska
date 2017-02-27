@@ -1,5 +1,5 @@
 <div id="comment-{{ comment.id }}">
-    <strong>{{ comment.author.username }}</strong> said : {{ comment.content }}<br>
+    <strong>{{ comment.author }}</strong> said : {{ comment.content }}<br>
     {% if comment.depth < 3 %}
     <button class="btn btn-default reply" data-id="{{ comment.id }}">Répondre</button>
     {% endif %}
