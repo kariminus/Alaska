@@ -98,6 +98,24 @@ class CommentDAO extends DAO
     }
 
     /**
+     * Returns a list of all flagged comments, sorted by date (most recent first).
+     *
+     * @return array A list of all flagged comments.
+     */
+    public function findAllFlagged() {
+        $sql = "select * from t_comment where flag= 1 order by com_id desc";
+        $result = $this->getDb()->fetchAll($sql);
+
+        // Convert query result to an array of domain objects
+        $entities = array();
+        foreach ($result as $row) {
+            $id = $row['com_id'];
+            $entities[$id] = $this->buildDomainObject($row);
+        }
+        return $entities;
+    }
+
+    /**
      * Removes all comments for an article
      *
      * @param $articleId The id of the article
@@ -179,16 +197,6 @@ class CommentDAO extends DAO
     }
 
     /**
-     * Flag a comment
-     *
-     * @param $id
-     */
-    private function flagComment($id) {
-        $comment = $this->find($id);
-        $comment->setFlagged(true);
-    }
-
-    /**
      * Creates an Comment object based on a DB row.
      *
      * @param array $row The DB row containing Comment data.
@@ -201,6 +209,7 @@ class CommentDAO extends DAO
         $comment->setAuthor($row['author']);
         $comment->setParentId($row['parent_id']);
         $comment->setDepth($row['depth']);
+        $comment->setFlagged($row['flag']);
 
         if (array_key_exists('art_id', $row)) {
             // Find and set the associated article

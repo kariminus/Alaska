@@ -182,9 +182,11 @@ $app->get('/login', function(Request $request) use ($app) {
 $app->get('/admin', function() use ($app) {
     $articles = $app['dao.article']->findAll();
     $comments = $app['dao.comment']->findAll();
+    $commentsFlagged = $app['dao.comment']->findAllFlagged();
     $users = $app['dao.user']->findAll();
     return $app['twig']->render('admin.html.twig', array(
         'articles' => $articles,
         'comments' => $comments,
+        'commentsFlagged' => $commentsFlagged,
         'users' => $users));
 })->bind('admin');
