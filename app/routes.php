@@ -99,7 +99,7 @@ $app->match('/admin/comment/{id}/edit', function($id, Request $request) use ($ap
 
 // Remove a comment
 $app->get('/admin/comment/{id}/delete', function($id, Request $request) use ($app) {
-    $app['dao.comment']->delete($id);
+    $app['dao.comment']->deleteWithChildren($id);
     $app['session']->getFlashBag()->add('success', 'The comment was successfully removed.');
     // Redirect to admin home page
     return $app->redirect($app['url_generator']->generate('admin'));

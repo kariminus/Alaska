@@ -160,6 +160,41 @@ class CommentDAO extends DAO
     }
 
     /**
+     * Removes a comment and his children from database
+     *
+     * @param $id
+     */
+    public function deleteWithChildren($id) {
+        $comment = $this->find($id);
+        $comments = $this->findAllWithChildren($comment->getArticle()->getId(), false);
+        $ids = $this->getChildrenIds($comments[$comment->getId()]);
+        $ids[] = $comment->getId();
+        foreach ($ids as $id) {
+            $this->delete($id);
+        }
+    }
+
+    /**
+     * Get all chidren ids of a comment
+     *
+     * @param $comment
+     *
+     * @return array
+     */
+    private function getChildrenIds($comment)
+    {
+        $ids = [];
+        foreach ($comment->getChildren() as $child) {
+            $ids[] = $child->getId();
+            if ($child->getChildren() != null) {
+                $ids = array_merge($ids, $this->getChildrenIds($child));
+            }
+        }
+        return $ids;
+    }
+
+
+    /**
      * Creates an Comment object based on a DB row.
      *
      * @param array $row The DB row containing Comment data.
