@@ -81,7 +81,7 @@
                         {% for comment in comments %}
                             <tr>
                                 <td><a class="articleTitle" href="{{ path('article', { 'id': comment.article.id }) }}">{{ comment.article.title }}</a></td>
-                                <td>{{ comment.author.username }}</td>
+                                <td>{{ comment.author }}</td>
                                 <td>{{ comment.content | truncate(60) }}</td>
                                 <td>
                                     <a href="{{ path('admin_comment_edit', { 'id': comment.id }) }}" class="btn btn-info btn-xs" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>
