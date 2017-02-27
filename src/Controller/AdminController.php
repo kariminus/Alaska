@@ -120,7 +120,7 @@ class AdminController {
 
     public function flagCommentAction($articleId, $commentId, Application $app) {
         $comment = $app['dao.comment']->find($commentId);
-        $comment->setFlagged(true);
+        $comment->setFlagged(1);
         $app['dao.comment']->save($comment);
         $app['session']->getFlashBag()->add('success', 'The comment was successfully flagged.');
         // Redirect to admin home page
@@ -130,11 +130,11 @@ class AdminController {
         ));
     }
 
-    public function unFlagCommentAction($articleId, $commentId, Application $app) {
+    public function unflagCommentAction($articleId, $commentId, Application $app) {
         $comment = $app['dao.comment']->find($commentId);
-        $comment->setFlagged(false);
+        $comment->setFlagged(0);
         $app['dao.comment']->save($comment);
-        $app['session']->getFlashBag()->add('success', 'The comment was successfully flagged.');
+        $app['session']->getFlashBag()->add('success', 'The comment was successfully unflagged.');
         // Redirect to admin home page
         return $app->redirect($app['url_generator']->generate(
             'article',

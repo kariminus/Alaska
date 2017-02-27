@@ -2,8 +2,8 @@
         <strong>{{ comment.author }}</strong> said : {% if comment.flagged == 1 %} Ce commentaire a été modéré {% else %}{{ comment.content }}<br>
         {% if comment.depth < 3 %}
         <button class="btn btn-default reply" data-id="{{ comment.id }}">Répondre</button>
-            <a href="{{ path('comment_flag', { 'articleId': comment.article.id, 'commentId': comment.id }) }}">Signaler le commentaire</a>
         {% endif %}
+        <a href="{{ path('comment_flag', { 'articleId': comment.article.id, 'commentId': comment.id }) }}">Signaler le commentaire</a>
     {% endif %}
 </div>
 

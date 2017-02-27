@@ -37,11 +37,11 @@ $app->get('/admin/comment/{id}/delete', "Alaska\Controller\AdminController::dele
     ->bind('admin_comment_delete');
 
 // Flag a comment
-$app->get('/admin/{articleId}/comment/{commentId}/flag', "Alaska\Controller\AdminController::deleteCommentAction")
+$app->match('/article/{articleId}/comment/{commentId}/flag', "Alaska\Controller\AdminController::flagCommentAction")
     ->bind('comment_flag');
 
-// UnFlag a comment
-$app->get('/admin/{articleId}/comment/{commentId}/unflag', "Alaska\Controller\AdminController::deleteCommentAction")
+// Unflag a comment
+$app->get('/admin/{articleId}/comment/{commentId}/unflag', "Alaska\Controller\AdminController::unflagCommentAction")
     ->bind('comment_unflag');
 
 // Add a user
