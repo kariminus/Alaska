@@ -32,6 +32,11 @@ class Comment
      */
     private $article;
 
+    /**
+     * @var boolean
+     */
+    private $flagged;
+
 
     /**
      * Associated comment id.
@@ -57,6 +62,7 @@ class Comment
         $this->parentId = 0;
         $this->children = [];
         $this->depth = 0;
+        $this->flagged = 0;
     }
 
     public function getId() {
@@ -126,6 +132,22 @@ class Comment
     public function setDepth($depth)
     {
         $this->depth = $depth;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isFlagged()
+    {
+        return $this->flagged;
+    }
+
+    /**
+     * @param boolean $flagged
+     */
+    public function setFlagged($flagged)
+    {
+        $this->flagged = $flagged;
     }
 
 

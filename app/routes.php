@@ -103,6 +103,19 @@ $app->get('/admin/comment/{id}/delete', function($id, Request $request) use ($ap
     return $app->redirect($app['url_generator']->generate('admin'));
 })->bind('admin_comment_delete');
 
+// Flag a comment
+$app->get('/article/{articleId}/comment/{commentId}/flag', function($articleId, $commentId, Request $request) use ($app) {
+    $comment = $app['dao.comment']->find($commentId);
+    $comment->setFlagged(1);
+    $app['dao.comment']->save($comment);
+    $app['session']->getFlashBag()->add('success', 'The comment was successfully flagged.');
+    // Redirect to admin home page
+    return $app->redirect($app['url_generator']->generate(
+        'article',
+        array('id' => $articleId)
+        ));
+})->bind('comment_flag');
+
 // Add a user
 $app->match('/admin/user/add', function(Request $request) use ($app) {
     $user = new User();

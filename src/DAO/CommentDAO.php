@@ -46,7 +46,7 @@ class CommentDAO extends DAO
 
         // art_id is not selected by the SQL query
         // The article won't be retrieved during domain objet construction
-        $sql = "select com_id, com_content, author, parent_id, depth from t_comment where art_id=? order by com_id";
+        $sql = "select com_id, com_content, author, parent_id, depth, flag from t_comment where art_id=? order by com_id";
         $result = $this->getDb()->fetchAll($sql, array($articleId));
 
         // Convert query result to an array of domain objects
@@ -118,7 +118,8 @@ class CommentDAO extends DAO
             'author' => $comment->getAuthor(),
             'com_content' => $comment->getContent(),
             'parent_id' => $comment->getParentId(),
-            'depth' => $comment->getDepth()
+            'depth' => $comment->getDepth(),
+            'flag' => $comment->isFlagged()
         );
 
         if ($comment->getId()) {
@@ -177,6 +178,15 @@ class CommentDAO extends DAO
         return $ids;
     }
 
+    /**
+     * Flag a comment
+     *
+     * @param $id
+     */
+    private function flagComment($id) {
+        $comment = $this->find($id);
+        $comment->setFlagged(true);
+    }
 
     /**
      * Creates an Comment object based on a DB row.

@@ -23,5 +23,6 @@ create table t_comment (
     author varchar(50) not null,
     parent_id integer,
     depth integer,
+    flag bool,
     constraint fk_com_art foreign key(art_id) references t_article(art_id)
 ) engine=innodb character set utf8 collate utf8_unicode_ci;
