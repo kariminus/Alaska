@@ -1,10 +1,9 @@
-{% extends 'layout.html.twig' %}
+{% extends 'back.html.twig' %}
 {% set adminMenu = true %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}<h2>{{ title }}</h2>{% endblock %}
 
 {% block content %}
-    <h2 class="text-center">{{ block('title') }}</h2>
     {% for flashMessage in app.session.flashbag.get('success') %}
         <div class="alert alert-success">
             {{ flashMessage }}

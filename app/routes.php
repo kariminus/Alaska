@@ -12,9 +12,22 @@ $app->match('/article/{id}', "Alaska\Controller\HomeController::articleAction")
 $app->get('/login', "Alaska\Controller\HomeController::loginAction")
     ->bind('login');
 
-// Admin zone
-$app->get('/admin', "Alaska\Controller\AdminController::indexAction")
-    ->bind('admin');
+
+// Admin articles
+$app->get('/admin/articles', "Alaska\Controller\AdminController::articleAction")
+    ->bind('admin_articles');
+
+// Admin comments
+$app->get('/admin/comments', "Alaska\Controller\AdminController::commentAction")
+    ->bind('admin_comments');
+
+// Admin flagged comments
+$app->get('/admin/flagged', "Alaska\Controller\AdminController::flaggedAction")
+    ->bind('admin_flagged');
+
+// Admin users
+$app->get('/admin/users', "Alaska\Controller\AdminController::userAction")
+    ->bind('admin_users');
 
 // Add a new article
 $app->match('/admin/article/add', "Alaska\Controller\AdminController::addArticleAction")

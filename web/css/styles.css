@@ -627,3 +627,7 @@ body .demo-blog {
     background: #6B9FFF;
     color:#fff;
 }
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+    color: #fff;
+}

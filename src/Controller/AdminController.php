@@ -13,20 +13,53 @@ use Alaska\Form\Type\UserType;
 class AdminController {
 
     /**
-     * Admin home page controller.
+     * Admin articles page controller.
      *
      * @param Application $app Silex application
      */
-    public function indexAction(Application $app) {
+    public function articleAction(Application $app) {
         $articles = $app['dao.article']->findAll();
+
+        return $app['twig']->render('articles.html.twig', array(
+            'articles' => $articles));
+    }
+
+    /**
+     * Admin comments page controller.
+     *
+     * @param Application $app Silex application
+     */
+    public function commentAction(Application $app) {
         $comments = $app['dao.comment']->findAll();
-        $commentsFlagged = $app['dao.comment']->findAllFlagged();
+
+        return $app['twig']->render('comments.html.twig', array(
+            'comments' => $comments));
+
+    }
+
+    /**
+     * Admin users page controller.
+     *
+     * @param Application $app Silex application
+     */
+    public function userAction(Application $app) {
         $users = $app['dao.user']->findAll();
-        return $app['twig']->render('admin.html.twig', array(
-            'articles' => $articles,
-            'comments' => $comments,
-            'commentsFlagged' => $commentsFlagged,
+
+        return $app['twig']->render('users.html.twig', array(
             'users' => $users));
+    }
+
+    /**
+     * Admin flagged comments page controller.
+     *
+     * @param Application $app Silex application
+     */
+    public function flaggedAction(Application $app) {
+        $commentsFlagged = $app['dao.comment']->findAllFlagged();
+
+        return $app['twig']->render('flagged.html.twig', array(
+            'commentsFlagged' => $commentsFlagged));
+
     }
 
     /**
@@ -81,7 +114,7 @@ class AdminController {
         $app['dao.article']->delete($id);
         $app['session']->getFlashBag()->add('success', 'The article was successfully removed.');
         // Redirect to admin home page
-        return $app->redirect($app['url_generator']->generate('admin'));
+        return $app->redirect($app['url_generator']->generate('admin_articles'));
     }
 
     /**
@@ -115,7 +148,7 @@ class AdminController {
         $app['dao.comment']->deleteWithChildren($id);
         $app['session']->getFlashBag()->add('success', 'The comment was successfully removed.');
         // Redirect to admin home page
-        return $app->redirect($app['url_generator']->generate('admin'));
+        return $app->redirect($app['url_generator']->generate('admin_comments'));
     }
 
     public function flagCommentAction($articleId, $commentId, Application $app) {
@@ -203,12 +236,10 @@ class AdminController {
      * @param Application $app Silex application
      */
     public function deleteUserAction($id, Application $app) {
-        // Delete all associated comments
-        $app['dao.comment']->deleteAllByUser($id);
         // Delete the user
         $app['dao.user']->delete($id);
         $app['session']->getFlashBag()->add('success', 'The user was successfully removed.');
         // Redirect to admin home page
-        return $app->redirect($app['url_generator']->generate('admin'));
+        return $app->redirect($app['url_generator']->generate('admin_users'));
     }
 }
