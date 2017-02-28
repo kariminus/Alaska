@@ -3,52 +3,83 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block content %}
-    <p>
-    <h2>{{ article.title }}</h2>
-    <p>{{ article.content | raw}}</p>
-
-    <h3>Comments</h3>
-    {% for comment in comments %}
-        {% include 'comment.html.twig' %}
-    {% else %}
-        No comments yet.
-    {% endfor %}
-
-    <h3>Add a comment</h3>
-    {% if commentForm %}
-        {{ form_start(commentForm, { 'attr':  {
-            'class': 'form',
-        }}) }}
-        <div class="form-group">
-            {{ form_errors(commentForm.author) }}
-            {{ form_widget(commentForm.author, { 'attr':  {
-                'rows': '1',
-                'class': 'form-control',
-                'placeholder': 'Enter your name'
-            }}) }}
-        </div>
-        <div class="form-group">
-            {{ form_errors(commentForm.content) }}
-            {{ form_widget(commentForm.content, { 'attr':  {
-                'rows': '4',
-                'class': 'form-control',
-                'placeholder': 'Enter your comment'
-            }}) }}
-            {{ form_widget(commentForm.parentId, { 'attr':  {
-                'hidden': true,
-            }}) }}
-        </div>
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="Publish comment" />
-        </div>
-        {{ form_end(commentForm) }}
-        {% for flashMessage in app.session.flashbag.get('success') %}
-            <div class="alert alert-success">
-                {{ flashMessage }}
+    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{ path('home') }}" title="go back" role="button">
+        <i class="material-icons" role="presentation">arrow_back</i>
+    </a>
+    <div class="demo-blog__posts mdl-grid">
+        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+                <h2>{{ article.title }}</h2>
             </div>
-        {% endfor %}
-    {% else %}
-        <a href="{{ path('login') }} ">Log in</a> to add comments.
-    {% endif %}
-    </p>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                <div class="minilogo"></div>
+                <div>
+                    <strong>Jean Forteroche</strong>
+                </div>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+                <p>{{ article.content | raw}}</p>
+            </div>
+            <div class="mdl-color-text--primary-contrast mdl-card__supporting-text ">
+                <div class="comment mdl-color-text--grey-700">
+                    {% for comment in comments %}
+                        {% include 'comment.html.twig' %}
+                    {% else %}
+                        Aucun commentaire
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+                    {% if commentForm %}
+                        {{ form_start(commentForm, { 'attr':  {
+                            'class': 'form-style-7',
+                        }}) }}
+                        <h1>Ajouter un commentaire</h1>
+                <ul>
+                    <li>
+                        {{ form_errors(commentForm.author) }}
+                        {{ form_widget(commentForm.author, { 'attr':  {
+                            'rows': '1',
+                            'placeholder': 'Entrez votre nom'
+                        }}) }}
+                    </li>
+                    <li>
+                        {{ form_errors(commentForm.content) }}
+                        {{ form_widget(commentForm.content, { 'attr':  {
+                            'rows': '4',
+                            'placeholder': 'Entrez votre commentaire'
+                        }}) }}
+                        {{ form_widget(commentForm.parentId, { 'attr':  {
+                            'hidden': true,
+                        }}) }}
+                    </li>
+                    <li>
+                        <input type="submit" value="Publier le commentaire" />
+                    </li>
+                </ul>
+                        {{ form_end(commentForm) }}
+                        {% for flashMessage in app.session.flashbag.get('success') %}
+                            <div class="alert alert-success">
+                                {{ flashMessage }}
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <a href="{{ path('login') }} ">Log in</a> to add comments.
+                    {% endif %}
+            </div>
+
+        </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //auto expand textarea
+            function adjust_textarea(h) {
+                h.style.height = "20px";
+                h.style.height = (h.scrollHeight) + "px";
+            }
+        })
+    </script>
 {% endblock %}

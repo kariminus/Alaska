@@ -1,13 +1,22 @@
-<div id="comment-{{ comment.id }}">
-        <strong>{{ comment.author }}</strong> said : {% if comment.flagged == 1 %} Ce commentaire a été modéré {% else %}{{ comment.content }}<br>
-        {% if comment.depth < 3 %}
-        <button class="btn btn-default reply" data-id="{{ comment.id }}">Répondre</button>
-        {% endif %}
-        <a href="{{ path('comment_flag', { 'articleId': comment.article.id, 'commentId': comment.id }) }}">Signaler le commentaire</a>
-    {% endif %}
-</div>
+        <div id="comment-{{ comment.id }}">
+        <header class="comment__header">
+                <div class="comment__author">
+                        <h4>{{ comment.author }} :</h4>
+                </div>
+        </header>
+        <div class="comment__text">
+            {% if comment.flagged == 1 %} Ce commentaire a été modéré {% else %}{{ comment.content }}
+        </div>
+                <div style="margin-top: 10px;">
+            {% if comment.depth < 3 %}
+                    <button class="btn btn-primary reply" data-id="{{ comment.id }}">Répondre</button>
+            {% endif %}
+                <a href="{{ path('comment_flag', { 'articleId': comment.article.id, 'commentId': comment.id }) }}">Signaler le commentaire</a>
+            {% endif %}
+                </div>
+        </div>
 
-<div style="margin-left: 50px;">
+        <div style="margin-left: 50px;">
     {% if comment.children is defined %}
         {% for comment in comment.children %}
             {% include 'comment.html.twig' %}
