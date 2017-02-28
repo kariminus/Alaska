@@ -5,7 +5,7 @@
 {% block content %}
     <p>
     <h2>{{ article.title }}</h2>
-    <p>{{ article.content }}</p>
+    <p>{{ article.content | raw}}</p>
 
     <h3>Comments</h3>
     {% for comment in comments %}
