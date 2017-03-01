@@ -40,7 +40,7 @@ class HomeController {
                     $comment->setDepth($parent->getDepth()+1);
                 }
                 $app['dao.comment']->save($comment);
-                $app['session']->getFlashBag()->add('success', 'Your comment was successfully added.');
+                $app['session']->getFlashBag()->add('success', 'Le commentaire a été ajouté avec succès');
             }
             $commentFormView = $commentForm->createView();
         $comments = $app['dao.comment']->findAllWithChildren($id);
